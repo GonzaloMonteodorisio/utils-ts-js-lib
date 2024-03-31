@@ -5,10 +5,10 @@ import { orderbyLongitude } from './../arry'
 describe('orderbyLongitude', () => {
   it('orderbyLongitude(["apple", "banana"]) should be ["apple", "grape", "banana", "orange"]', () => {
     const result = orderbyLongitude(['banana', 'apple'])
-    expect(result).toBe(['apple', 'banana'])
+    expect(result).toStrictEqual(['apple', 'banana'])
   })
   it('isArrayOfStrings([]) should be true', () => {
     const result = orderbyLongitude([])
-    expect(result).toBe([])
+    expect(result).toStrictEqual([])
   })
 })

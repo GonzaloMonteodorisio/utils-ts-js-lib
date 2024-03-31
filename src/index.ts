@@ -1,3 +1,2 @@
-export function suma(n:number,m:number) {
-    return n+ m 
-}
+export * from './arry/arry'
+export * from './string/capitarLater'
