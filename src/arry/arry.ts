@@ -21,7 +21,7 @@ export function takeOut(words: string[], removed: string): string[] {
   if (isArrayOfStrings(words) && typeof removed === 'string') {
     const index = words.indexOf(removed)
     if (index !== -1) {
-      orderWords = words.filter((word, i) => i !== index && word === word)
+      orderWords = words.filter((_, i) => i !== index)
     } else {
       orderWords = words.slice()
     }
