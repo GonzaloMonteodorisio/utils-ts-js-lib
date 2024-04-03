@@ -20,3 +20,11 @@ export function equalityBetwenn<
 
   return true
 }
+
+export function Convinar<
+  T extends Record<string, unknown>,
+  V extends Record<string, unknown>
+>(obj1: T, obj2: V): object {
+  const combined = { ...obj1, ...obj2 }
+  return combined
+}

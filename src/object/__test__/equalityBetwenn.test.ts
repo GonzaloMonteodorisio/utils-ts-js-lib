@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, test } from 'vitest'
 import { equalityBetwenn } from '../equalityBetwenn'
 
 describe('equalityBetwenn', () => {
@@ -16,5 +16,13 @@ describe('equalityBetwenn', () => {
     const result = equalityBetwenn(10,2)
     expect(result).toBe(false)
   })
- 
+  test('should sum every single number by the given accesor', () => {
+    const dataObj = [
+      { value: 2 },
+      { value: 3 }
+    ]
+    // @ts-expect-error we want to test the undefined case
+    const actual = equalityBetwenn(dataObj, {})
+    expect(actual).toBe(false)
+  })
 })
