@@ -11,6 +11,10 @@ describe('equalityBetwenn', () => {
     const result = equalityBetwenn({}, [])
     expect(result).toBe(true)
   })
- 
+  it('equalityBetwenn(10,2) retunr false', () => {
+    // @ts-expect-error we want to test the undefined case
+    const result = equalityBetwenn(10,2)
+    expect(result).toBe(false)
+  })
  
 })
