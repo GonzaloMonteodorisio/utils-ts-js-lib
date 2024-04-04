@@ -5,7 +5,7 @@ export function capitalLater(word: string): string {
       .map((str: string) => {
         return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
       })
-      .join(' ')
+      .join('')
   } else {
     return ''
   }
