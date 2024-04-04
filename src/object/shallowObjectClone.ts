@@ -1,5 +1,5 @@
 export function shallowObjectClone<T>(obj: T): T {
-  if (obj === null || typeof obj !== 'object') {
+  if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
     return {} as unknown as T
   }
 

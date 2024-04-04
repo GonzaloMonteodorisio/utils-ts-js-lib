@@ -8,8 +8,26 @@ describe('shallowClone', () => {
     expect(result).toEqual({})
   })
 
-  it('should return an empty object if input is not an object', () => {
+  it('should return an empty object if input is a number', () => {
     const input = 10
+    const result = shallowObjectClone(input)
+    expect(result).toEqual({})
+  })
+
+  it('should return an empty object if input is a string', () => {
+    const input = 'Hello'
+    const result = shallowObjectClone(input)
+    expect(result).toEqual({})
+  })
+
+  it('should return an empty object if input is an array', () => {
+    const input = ['Hello', 'lucky']
+    const result = shallowObjectClone(input)
+    expect(result).toEqual({})
+  })
+
+  it('should return an empty object if input is a Date', () => {
+    const input = new Date()
     const result = shallowObjectClone(input)
     expect(result).toEqual({})
   })
@@ -18,6 +36,7 @@ describe('shallowClone', () => {
     const input = { name: 'John', age: 30 }
     const result = shallowObjectClone(input)
     expect(result).toEqual(input)
-    expect(result).not.toBe(input) // Verifica que el objeto clonado no sea el mismo objeto de referencia
+    expect(result).not.toBe(input) // 
+    // Verify that the cloned object is not the same reference object
   })
 })
