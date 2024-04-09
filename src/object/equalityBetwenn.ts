@@ -20,11 +20,17 @@ export function equalityBetwenn<
 
   return true
 }
+type AnyObject = Record<string, unknown>
 
-export function Convinar<
-  T extends Record<string, unknown>,
-  V extends Record<string, unknown>
->(obj1: T, obj2: V): object {
-  const combined = { ...obj1, ...obj2 }
-  return combined
+export function combine<T extends object, U extends object>(
+  obj1: T,
+  obj2: U
+): T & U {
+  let combined: object[] = []
+
+  if (typeof obj1 === 'object' && typeof obj2 === 'object') {
+    return (combined = [...obj1, ...obj2])
+  } else {
+    return combined
+  }
 }

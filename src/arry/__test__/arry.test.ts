@@ -26,4 +26,14 @@ describe('isArrayOfStrings', () => {
     const result = isArrayOfStrings(new Date())
     expect(result).toBe(false)
   })
+  it('isArrayOfStrings(new date()) should be false', () => {
+    // @ts-expect-error we want to test the undefined case
+    const result = isArrayOfStrings("papa")
+    expect(result).toBe(false)
+  })
+  it('isArrayOfStrings(new date()) should be false', () => {
+    // @ts-expect-error we want to test the undefined case
+    const result = isArrayOfStrings([5,2])
+    expect(result).toBe(false)
+  })
 })
