@@ -20,17 +20,16 @@ export function equalityBetwenn<
 
   return true
 }
-type AnyObject = Record<string, unknown>
 
-export function combine<T extends object, U extends object>(
-  obj1: T,
-  obj2: U
-): T & U {
-  let combined: object[] = []
+// export function combine<T extends object, U extends object>(
+//   obj1: T,
+//   obj2: U
+// ): T & U {
+//   let combined= []
 
-  if (typeof obj1 === 'object' && typeof obj2 === 'object') {
-    return (combined = [...obj1, ...obj2])
-  } else {
-    return combined
-  }
-}
+//   if (typeof obj1 === 'object' && typeof obj2 === 'object') {
+//     return (combined = [...obj1, ...obj2])
+//   } else {
+//     return combined
+//   }
+// }
