@@ -1,7 +1,8 @@
 {
   "name": "utils-ts-js-lib",
-  "version": "0.0.0",
+  "version": "1.0.2",
   "type": "module",
+  "types": "dist/index.d.ts",
   "main": "./dist/util-ts-js-lib.umd.cjs",
   "exports": {
     ".": {

@@ -21,15 +21,17 @@ export function equalityBetwenn<
   return true
 }
 
-// export function combine<T extends object, U extends object>(
-//   obj1: T,
-//   obj2: U
-// ): T & U {
-//   let combined= []
+export function combine<T extends object, U extends object>(
+  obj1: T,
+  obj2: U
+): object[] {
+  const combined: object[] = []
 
-//   if (typeof obj1 === 'object' && typeof obj2 === 'object') {
-//     return (combined = [...obj1, ...obj2])
-//   } else {
-//     return combined
-//   }
-// }
+  if (typeof obj1 === 'object' && typeof obj2 === 'object') {
+    combined.push(obj1)
+    combined.push(obj2)
+    return combined
+  } else {
+    return combined
+  }
+}
